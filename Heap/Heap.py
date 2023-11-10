@@ -84,9 +84,12 @@ class MaxHeap():
         while self.__parent(l)-1 >= 0 and self.Heap[self.__parent(l)-1] < self.Heap[l-1]:
             self.__swap(l, self.__parent(l))
             l = self.__parent(l)
+            
+    def display(self):
+        print(*self.Heap)
          
 if __name__ == "__main__":
-    o = MinHeap()
+    o = MaxHeap()
     insert = True
     while insert:
         o.insert()
@@ -96,5 +99,5 @@ if __name__ == "__main__":
     o.display()
     # print(o.pop())
     # o.display()
-    o.heapSort()
+    # o.heapSort()
 
